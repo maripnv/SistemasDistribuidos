@@ -1,10 +1,11 @@
 package lab1;
 
 /**
- * Lab0: Leitura de Base de Dados N�o-Distribuida
+ * Lab1: Leitura de Base de Dados Nao-Distribuida
  * 
  * Autor: Lucio A. Rocha
- * Ultima atualizacao: 20/02/2023
+ * Estudantes: Mariana Pedroso Naves (RA:2320720) e Andrei Fernandes Zani (RA: 2367831)
+ * Ultima atualizacao: 20/10/2024
  * 
  * Referencias: 
  * https://docs.oracle.com/javase/tutorial/essential/io
