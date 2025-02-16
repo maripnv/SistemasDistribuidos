@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Reservar Livro</title>
+        <h:outputStylesheet name="css/style.css"/>
+    </h:head>
+    <h:body>
+        <!-- Imagem de fundo -->
+        <h:graphicImage name="imagens/reservar.png" alt="Imagem de Fundo" styleClass="bg-image"/>
+
+        <div class="reserva">
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel for="idLivro" value="ID do Livro:" />
+                    <h:inputText id="idLivro" value="#{reservarLivrosBean.idLivro}">
+                        <f:convertNumber integerOnly="true"/>
+                    </h:inputText>
+
+                    <h:outputLabel for="idUsuario" value="RG do(a) Leitor(a):" />
+                    <h:inputText id="idUsuario" value="#{reservarLivrosBean.idUsuario}">
+                        <f:convertNumber integerOnly="true"/>
+                    </h:inputText>
+
+                    <h:commandButton value="Reservar agora" action="#{reservarLivrosBean.reservarLivro}" styleClass="green-button"/>
+                    <h:commandButton value="Voltar ao Menu" action="index.xhtml" styleClass="green-button" />
+                    <h:commandButton value="Cancelar alguma reserva" action="cancelarLivro.xhtml" styleClass="green-button" />
+                    <h:commandButton value="Consultar Livros Disponíveis" action="consultarLivro.xhtml" styleClass="green-button"/>
+                </h:panelGrid>
+
+                <h:messages/>
+
+                <h:outputText value="Apresente na biblioteca o seu código para retirada do livro: #{reservarLivrosBean.codigoReserva}" 
+                              rendered="#{not empty reservarLivrosBean.codigoReserva}" 
+                              styleClass="codigo-reserva"/>
+            </h:form>
+        </div>
+    </h:body>
+</html>

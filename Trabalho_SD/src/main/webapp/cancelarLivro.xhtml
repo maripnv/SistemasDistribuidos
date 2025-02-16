@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <title>Cancelar Reserva</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+
+    <h:body>
+        <!-- Imagem de fundo -->
+        <h:graphicImage name="imagens/cancelar.png" alt="Imagem de Fundo" styleClass="bg-image"/>
+
+        <div class="cancelar">
+            <h:form>
+                <!-- Campo para inserir o ID do livro e ID do usuário -->
+
+                <h:panelGrid columns="2">
+                    <h:outputLabel for="idLivro" value="ID do Livro:"/>
+                    <h:inputText id="idLivro" value="#{reservarLivrosBean.idLivro}" required="true">
+                        
+                    </h:inputText>
+
+                    <h:outputLabel for="idUsuario" value="RG do(a) Leitor(a):"/>
+                    <h:inputText id="idUsuario" value="#{reservarLivrosBean.idUsuario}" required="true">
+                        
+                    </h:inputText>
+
+
+                    <!-- Mensagens de erro -->
+                    <h:messages globalOnly="true" style="color:red;"/>
+
+                    <!-- Botão para cancelar a reserva -->
+                    <h:commandButton value="Cancelar Reserva" action="#{reservarLivrosBean.cancelarReserva}" styleClass="green-button"/>
+
+                    <!-- Botão para voltar ao menu -->
+
+
+<h:commandButton value="Voltar ao Menu" action="index.xhtml" styleClass="green-button" immediate="true"/>
+                </h:panelGrid>
+
+            </h:form>
+        </div> <!-- Fechando a div .cancelar -->
+
+    </h:body>
+</html>

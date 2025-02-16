@@ -1,0 +1,10 @@
+br\edu\utfpr\trabalho_sd\resources\JakartaEE10Resource.class
+br\edu\utfpr\trabalho_sd\ejb\Reserva.class
+br\edu\utfpr\trabalho_sd\ejb\ReservaService.class
+br\edu\utfpr\trabalho_sd\ejb\ReservaServiceImpl.class
+br\edu\utfpr\trabalho_sd\jsf\ReservarLivrosBean.class
+br\edu\utfpr\trabalho_sd\jsf\Livro.class
+br\edu\utfpr\trabalho_sd\JakartaRestConfiguration.class
+br\edu\utfpr\trabalho_sd\ejb\Tranca.class
+br\edu\utfpr\trabalho_sd\jsf\ListaLivrosBean.class
+br\edu\utfpr\trabalho_sd\jsf\ConsultarLivro.class

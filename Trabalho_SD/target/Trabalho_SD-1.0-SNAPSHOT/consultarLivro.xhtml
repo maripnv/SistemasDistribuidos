@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Consultar Livros</title>
+        <h:outputStylesheet name="css/style.css"/>
+    </h:head>
+    <h:body>
+        <!-- Imagem de fundo -->
+        <h:graphicImage name="imagens/consulta.png" alt="Imagem de Fundo" styleClass="bg-image"/>
+
+        <div class="consultar">
+           <h:dataTable value="#{listaLivrosBean.livros}" var="livro" border="1">
+    <h:column>
+        <f:facet name="header">ID Livro</f:facet>
+        #{livro.idLivro}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Título</f:facet>
+        #{livro.titulo}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Autor</f:facet>
+        #{livro.autor}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Disponibilidade</f:facet>
+        #{livro.status}
+    </h:column>
+</h:dataTable>
+
+            <h:form>
+                <h:commandButton value="Voltar ao Menu" action="index.xhtml" styleClass="green-button"/>
+            </h:form>
+            
+            <h:form>
+                <h:commandButton value="Reservar Livro" action="reservarLivro.xhtml" styleClass="green-button2"/>
+            </h:form>
+        </div>
+    </h:body>
+</html>
